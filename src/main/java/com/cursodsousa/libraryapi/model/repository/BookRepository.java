@@ -1,14 +1,15 @@
 package com.cursodsousa.libraryapi.model.repository;
 
-import com.cursodsousa.libraryapi.model.entity.Book;
+import java.util.Optional;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import java.util.Optional;
+import com.cursodsousa.libraryapi.model.entity.Book;
 
 public interface BookRepository extends JpaRepository<Book, Long> {
 
-    boolean existsByIsbn( String isbn );
+    boolean existsByIsbn(String isbn);
 
-    Optional<Book> findByIsbn( String isbn);
+    Optional<Book> findByIsbn(String isbn);
 
 }
